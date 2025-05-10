@@ -1,0 +1,125 @@
+@var1: #EBEFF8;
+@var2: #333333;
+@var3: #ffffff;
+@var4: #999999;
+@var5: #e8e8e8;
+@var6: #333333;
+
+.my{
+    background-color: @var1;
+    padding-bottom: 20px;
+}
+
+
+	.bodyblock {
+		padding-top: 10px;
+        background-color: @var1;
+		height: 100vh;
+		margin-bottom: 50px;
+		.top {
+			height: 2.5rem;
+			width: 100%;
+			.actor {
+				padding: 10px;
+				.set-avator {
+					position: relative;
+					width: 1rem;
+                    height: 1rem;
+                    display: inline;
+					img {
+						height: 2rem;
+						width: 2rem;
+						border-radius: 50%;
+						position: absolute;
+						left: 0;
+						top: 0;
+					}
+				}
+				.text {
+					padding-left: 2rem;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					.user-name {
+						font-size: 0.5rem;
+                        padding-bottom: 10px;
+                        text-align: end;
+					}
+				}
+			}
+			.actor {
+				padding-left: 10px;
+				display: flex;
+				justify-content: start;
+				align-items: center;
+			}
+		}
+		.about {
+			margin-bottom: 1rem;
+            background-color: @var1;
+
+		}
+		.about-ul {
+			background-color: @var1;
+		}
+		.about-li {
+			display: flex;
+			align-items: center;
+			height: 1rem;
+            border-bottom: 1px solid @var5;
+            background-color: @var3;
+			.left {
+				width: 2rem;
+				display: inline;
+				justify-content: center;
+				align-items: center;
+				padding-left: 20px;
+				i{
+                    font-size: 0.5rem;
+                    flex-direction: column;
+                    justify-content: center;
+				}
+			}
+			.right {
+				display: inline;
+				flex: 1;
+				align-self: center;
+				.lt {
+					font-size: 0.4rem;
+					color: @var6;
+					float: left;
+				}
+				.rt {
+					display: inline;
+					float: right;
+					
+					i {
+                        font-size: 0.5rem;
+                        flex-direction: column;
+                        justify-content: center;
+					}
+					
+				}
+			}
+			// .right {
+			// 	flex: 1;
+			// 	display: flex;
+			// 	justify-content: space-between;
+			// 	align-items: center;
+			// 	font-size: 0.98133333rem;
+			// 	color: @var4;
+			// }
+			.noborder {
+				border-bottom: 0 none;
+				display: inline;
+				flex: 1;
+			}
+		}
+		
+		.pay-resource {
+			margin-top: 20px;
+			// background-color: @var3;
+		}
+	}
+
+
