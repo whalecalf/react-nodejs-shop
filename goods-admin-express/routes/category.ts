@@ -19,8 +19,8 @@ router.get('/', async (req: Request, res: Response)=>{
     ...(name && {name}),
     ...(level && {level}),
   }); 
-  // console.log("goodsdata",data);
-  return res.status(200).json({data,total});
+  console.log("goodsdata",data);
+  return res.status(200).json({data:{data,total}});
 });
 
 router.post('/', async (req: Request, res: Response)=>{

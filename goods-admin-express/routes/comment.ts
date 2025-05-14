@@ -34,7 +34,7 @@ router.post('/', async (req: Request, res: Response)=>{
          
      ]);
     //  console.log('id',comId);
-     return res.json({id:comId,success: true, code: 200})
+     return res.json({data:{id:comId},success: true, code: 200})
    
 });
 

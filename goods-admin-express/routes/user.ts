@@ -68,8 +68,8 @@ router.post('/login', async (req:Request, res: Response) => {
   // console.log(user);
   
   if (user) {
-    const token = jwt.sign({id: user._id}, SECRET_KEY, {expiresIn:'24h'})
-    res.status(200).json({ status:200, data: user, success: true, token});
+    const token = jwt.sign({id: user._id}, SECRET_KEY, {expiresIn:'168h'})
+    res.status(200).json({ status:200, data: {user,token}, success: true});
   } else {
     res.status(500).json({ message: '用户名或密码错误' })
   }

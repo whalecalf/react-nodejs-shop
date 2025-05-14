@@ -23,8 +23,8 @@ router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         .limit(Number(pageSize))
         .populate({ path: 'parent' });
     const total = yield model_1.Category.countDocuments(Object.assign(Object.assign({}, (name && { name })), (level && { level })));
-    // console.log("goodsdata",data);
-    return res.status(200).json({ data, total });
+    console.log("goodsdata", data);
+    return res.status(200).json({ data: { data, total } });
 }));
 router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name } = req.body;

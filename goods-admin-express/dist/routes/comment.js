@@ -36,7 +36,7 @@ router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         comId = res._id,
     ]);
     //  console.log('id',comId);
-    return res.json({ id: comId, success: true, code: 200 });
+    return res.json({ data: { id: comId }, success: true, code: 200 });
 }));
 router.delete('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;

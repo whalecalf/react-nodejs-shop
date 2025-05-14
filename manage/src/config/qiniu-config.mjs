@@ -1,0 +1,1 @@
+export const HOST_NAME = 'sw1e12f9k.hn-bkt.clouddn.com'

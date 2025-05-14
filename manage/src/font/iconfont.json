@@ -1,0 +1,58 @@
+{
+  "id": "4435718",
+  "name": "后台管理",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "577334",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e736",
+      "unicode_decimal": 59190
+    },
+    {
+      "icon_id": "2170601",
+      "name": "商品-2",
+      "font_class": "shangpin-",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "2675010",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "6119267",
+      "name": "添加",
+      "font_class": "add-line",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "7499627",
+      "name": "商品列表",
+      "font_class": "shangpinliebiao",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "8820140",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "17990793",
+      "name": "日志",
+      "font_class": "rizhi",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    }
+  ]
+}

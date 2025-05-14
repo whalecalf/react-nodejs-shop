@@ -1,0 +1,22 @@
+.logo{
+    font-size: 20px;
+    color: white;
+    margin-right: 50px;
+}
+
+.userinfo{
+    color: white;
+    float: right;
+    font-size: 16px;
+}
+
+.sectionInner{
+    
+    height: 100%,
+    
+}
+
+.sectionContent{
+    /* padding: 32px; */
+}
+

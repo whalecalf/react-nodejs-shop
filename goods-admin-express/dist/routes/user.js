@@ -66,8 +66,8 @@ router.post('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* 
     const user = yield model_1.User.findOne({ name, password });
     // console.log(user);
     if (user) {
-        const token = jsonwebtoken_1.default.sign({ id: user._id }, constant_1.SECRET_KEY, { expiresIn: '24h' });
-        res.status(200).json({ status: 200, data: user, success: true, token });
+        const token = jsonwebtoken_1.default.sign({ id: user._id }, constant_1.SECRET_KEY, { expiresIn: '168h' });
+        res.status(200).json({ status: 200, data: { user, token }, success: true });
     }
     else {
         res.status(500).json({ message: '用户名或密码错误' });

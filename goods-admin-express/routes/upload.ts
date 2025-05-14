@@ -5,15 +5,15 @@ var router = express.Router();
 
 
 const Qiniu = {
-    AK:'',
-    SK:''
+    AK:'oF1fdJOoGr36XlVyLH70kAbxRlu3d3C76ceDwSS6',
+    SK:'t0OdQGbjHw6_H8yVX2qCEcpmDTN32-GCrKcvtpRk'
 }
 
 qiniu.conf.ACCESS_KEY = Qiniu.AK;
 qiniu.conf.SECRET_KEY = Qiniu.SK;
 
 // 七牛那边的对应的bucket名称
-const bucket = ' ';
+const bucket = 'shop-database4';
 
 
 const getToken = () => {
@@ -30,7 +30,7 @@ router.post('/',async (req: Request, res: Response)=>{
 
     const token = getToken()
     console.log(token);
-    return res.status(200).json({token:token});
+    return res.status(200).json({data:{token}});
 })
 
 export default router;

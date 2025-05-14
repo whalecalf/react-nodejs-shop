@@ -1,0 +1,12 @@
+.ta{
+    width: 275px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.btn{
+    justify-content: flex-end;
+    display: flex;
+    margin:auto auto 0;
+}

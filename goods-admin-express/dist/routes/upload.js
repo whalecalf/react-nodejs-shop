@@ -16,13 +16,13 @@ const express_1 = __importDefault(require("express"));
 const qiniu_1 = __importDefault(require("qiniu"));
 var router = express_1.default.Router();
 const Qiniu = {
-    AK: '',
-    SK: ''
+    AK: 'oF1fdJOoGr36XlVyLH70kAbxRlu3d3C76ceDwSS6',
+    SK: 't0OdQGbjHw6_H8yVX2qCEcpmDTN32-GCrKcvtpRk'
 };
 qiniu_1.default.conf.ACCESS_KEY = Qiniu.AK;
 qiniu_1.default.conf.SECRET_KEY = Qiniu.SK;
 // 七牛那边的对应的bucket名称
-const bucket = ' ';
+const bucket = 'shop-database4';
 const getToken = () => {
     const putPolicy = new qiniu_1.default.rs.PutPolicy({
         scope: bucket
@@ -34,6 +34,6 @@ const getToken = () => {
 router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const token = getToken();
     console.log(token);
-    return res.status(200).json({ token: token });
+    return res.status(200).json({ data: { token } });
 }));
 exports.default = router;
