@@ -1,26 +1,5 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/category/add/page": "app/category/add/page.js",
-  "/category/edit/[id]/page": "app/category/edit/[id]/page.js",
-  "/category/page": "app/category/page.js",
-  "/comment/edit/[id]/page": "app/comment/edit/[id]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/goods/add/page": "app/goods/add/page.js",
-  "/log/add/page": "app/log/add/page.js",
-  "/goods/page": "app/goods/page.js",
-  "/log/page": "app/log/page.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/goods/edit/[id]/page": "app/goods/edit/[id]/page.js",
-  "/login/page": "app/login/page.js",
-  "/log/show/[id]/page": "app/log/show/[id]/page.js",
-  "/sign/page": "app/sign/page.js",
-  "/store/edit/[id]/page": "app/store/edit/[id]/page.js",
-  "/store/order/page": "app/store/order/page.js",
-  "/store/add/page": "app/store/add/page.js",
-  "/store/order/edit/[id]/page": "app/store/order/edit/[id]/page.js",
-  "/user/add/page": "app/user/add/page.js",
-  "/upload/page": "app/upload/page.js",
-  "/user/edit/[id]/page": "app/user/edit/[id]/page.js",
-  "/user/page": "app/user/page.js",
-  "/store/page": "app/store/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

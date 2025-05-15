@@ -135,7 +135,7 @@ export default function Layout({children}:{children:ReactNode}) {
       theme="dark"
       mode="horizontal"
       defaultSelectedKeys={['2']}
-      // items={items1}
+      items={[]}
       style={{ flex: 1, minWidth: 0 }}
     />
     <span className={style.userinfo}>

@@ -4,14 +4,15 @@ import LoginHeader from '../../../components/PubHeader'
 import api from '../../../api'
 import validator from '../../../utils/validator'
 import classnames from 'classnames'
-import { Space } from 'antd'
+import { useNavigate } from 'react-router-dom'
 
 function LoginView(props) {
 
   const [name, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [errors,setErrors] = useState({})
-
+  const navigate=useNavigate()
+  
 
   function changeHandle(e) {
     if (e.target.name === 'name') {
@@ -28,10 +29,13 @@ function LoginView(props) {
 
     var { isValid, errors } = validator({
       name,
-      password
+      password,
     })
 
-    if (!isValid) {
+    console.log(isValid);
+    
+
+    if (isValid) {
       await api.login({
         name,
         password
@@ -77,7 +81,7 @@ function LoginView(props) {
               placeholder='输入密码'
               onChange={changeHandle} />
           </div>
-          <Space><button type='submit' className='btn-login'>登录</button><button url={'http://localhost:3001/sign'} className='btn-login'>注册</button></Space>
+          <div className='btn-group'><button type='submit' className='btn-login'>登录</button><button onClick={()=>navigate('/sign')} className='btn-login'>注册</button></div>
         </form>
       </div>
     </div>

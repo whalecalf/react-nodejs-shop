@@ -12,10 +12,13 @@ const validatorInput = (data) =>{
     if(validator.isEmpty(data.password)){
         errors.password = "密码不能为空"
     }
+
+
+    
    
     return{
         // 如果 value 为空，那么返回 true，否则返回 false。
-        isValid:!isEmpty(errors),
+        isValid:isEmpty(errors),
         errors
     }
 }

@@ -143,7 +143,6 @@ export default function Sign(){
                         message: "请选择角色"
                     }]}>
                     <Radio.Group>
-                        <Radio value="buyer">买家</Radio>
                         <Radio value="seller">商家</Radio>
                         <Radio value="admin">管理员</Radio>
                     </Radio.Group>

@@ -19,6 +19,7 @@ import Order from "../pages/Order"
 import Pay from "../pages/Pay"
 import Comment from "../pages/Comment"
 import Refund from "../pages/Refund"
+import Sign from "../pages/Sign"
 
 const AppRouter=()=>{
     return(
@@ -34,6 +35,7 @@ const AppRouter=()=>{
                     <Route path="/city" element={<City/>}></Route>
                     <Route path="/details/:id" element={<Details/>}></Route>
                     <Route path="/login" element={<Login/>}></Route>
+                    <Route path="/sign" element={<Sign/>} ></Route>
                     <Route path="/search/:keywords" element={<Search/>}></Route>
                     <Route path="/category" element={<Category/>}></Route>
                     <Route path="/newlist" element={<NewList/>}></Route>

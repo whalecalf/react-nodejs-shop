@@ -2,6 +2,12 @@ import axios from "../utils/request";
 import qs from "querystring"
 
 const api={
+
+    // 注册
+    sign(params){
+        return axios.post('/api/users',params)
+    },
+
     // 登录
     login(params){        
         return axios.post('/api/users/login',params)

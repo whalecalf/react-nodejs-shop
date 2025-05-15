@@ -11,13 +11,15 @@ function Login() {
   const navigate=useNavigate()
 
   function LoginHandle(user) {
-    console.log(user);
-    user.data.password = md5(user.data.password)
+    let userinfo = user.data.user
+    console.log(userinfo);
+    
+    userinfo.password = md5(userinfo.password)
     // 写入redux
-    dispatch(LoginAction.setLogin(user))
+    dispatch(LoginAction.setLogin(userinfo))
     // 写入本地
     
-    localStorage.setItem("user",JSON.stringify({info:user.data, token: user.token}))
+    localStorage.setItem("user",JSON.stringify({info:user.data, token: user.data.token}))
     navigate('/')
   }
 
