@@ -13,7 +13,7 @@ const OrderList=()=>{
 
     const fetchData=async()=>{
             await api.getOrderList({buyer:userinfo._id}).then(res=>{
-                setOrderList([]||res.data.data)
+                setOrderList(res.data.data||[])
             })
         }
 

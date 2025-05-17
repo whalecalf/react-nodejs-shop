@@ -68,13 +68,14 @@ const Category = () => {
 
     const [ITEM,setITEM] = useState([])
     const [ITEM2, setITEM2] = useState([])
+    const [loading,setLoading] = useState(true)
     // var [sub1,setSub1]=useState([])
 
     useEffect(() => {
         const fetchData = async () => {
             await api.category({ all: true, level: 1 }).then((res) => {
                 console.log(res);
-                setITEM2(res.data.data);
+                setITEM2(res.data.data.data);
             })
         }
         fetchData()  
@@ -92,64 +93,48 @@ const Category = () => {
     //         }))
     // }, [ITEM2]);
 
-    useEffect(()=>{
-        var ITEM1=[];
-        var sub1=[];
-        const fetchChild=async (index)=>{
-                await api.category({parent:ITEM2[index]._id}).then((res)=>{
-                    // console.log('child',res.data.data);
-                    // setSub1(res.data.data);
-                    sub1=res.data.data
-                    // console.log(sub1);
-                    ITEM1[index].children= <div className="hot-container">
-                <ul className="clear-fix">
-                    {
-                        sub1.map((element,index)=>{
-                            return(<li key={index}>
-                                <a href={element.link}>
-                                    <img src={element.icon} alt="" />
-                                    <span>{element.name}</span>
-                                </a>
-                            </li>)
+  useEffect(() => {
+  const fetchData = async () => {
+    const itemList = await Promise.all(
+      ITEM2.map(async (item, index) => {
+        const res = await api.category({ parent: item._id });
+        const childrenData = res.data.data.data || [];
 
-                        })
-                    }
-                </ul>
+        return {
+          value: item._id,
+          label: item.name,
+          key: '1' + index,
+          forceRender: true,
+          children: (
+            <div className="hot-container">
+              <ul className="clear-fix">
+                {childrenData.map((element, idx) => (
+                  <li key={idx}>
+                    <a href={element.link}>
+                      <img src={element.icon} alt="" />
+                      <span>{element.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-                })
-        }
+          ),
+        };
+      })
+    );
 
-        const fetchData=async ()=>{
-             for(var i=0;i<ITEM2.length;i++){
-                fetchChild(i)
-            ITEM1[i]={
-                        value: ITEM2[i]._id,
-                        label: ITEM2[i].name,
-                        key: '1'+i,
-                        forceRender:true,
-                        children:<div className="hot-container">
-                        <ul className="clear-fix">
-                            {
-                                sub1.map((element,index)=>{
-                                    return(<li key={index}>
-                                        <a href={element.link}>
-                                            <img src={element.icon} alt="" />
-                                            <span>{element.name}</span>
-                                        </a>
-                                    </li>)
-        
-                                })
-                            }
-                        </ul>
-                        </div>
-                        }
-        }
-        }
+    setITEM(itemList);
+    setLoading(false)
 
-        fetchData()
-        console.log(ITEM1);
-        setITEM(ITEM1)
-    },[ITEM2])
+  };
+
+  if (ITEM2.length > 0) {
+    setLoading(true)
+    fetchData();
+  }
+
+}, [ITEM2]);
+
 
     console.log(ITEM);
 
@@ -169,13 +154,17 @@ const Category = () => {
                 }}
             >
                 <PubHeader title={'全部分类'} />
-                <Tabs
+                {
+                    !loading?
+                    <Tabs
                     defaultActiveKey="1"
                     tabPosition={'left'}
                     items={ITEM}
                     moreIcon
                     id='tab'
-                />
+                />:'等待数据加载...'
+                }
+                
                 
 
             </ConfigProvider>

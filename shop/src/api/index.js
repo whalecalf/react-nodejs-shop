@@ -129,7 +129,10 @@ const api={
     search(keywords){
         return axios.get(`api/goods`,{name:keywords})
     },
-   
+    //  获取商品列表
+    getGoodsList(params){
+        return axios.get(`api/goods`,params)
+    }
 }
 
 export default api;

@@ -24,7 +24,8 @@ export default function Layout({children}:{children:ReactNode}) {
   
   const router = useRouter()
   const [user,setUser] = useState({info:{nickName:""}})
-  const role=JSON.parse(localStorage.getItem("user")||'').info.role
+  
+  const role=localStorage.getItem("user")?JSON.parse(localStorage.getItem("user")||'null').info.role:''
 
   useEffect(()=>{
     if (role===USER_ROLE.SELLER) {

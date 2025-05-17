@@ -1,0 +1,1 @@
+export const BASE_URL='http://sw1e12f9k.hn-bkt.clouddn.com/'

@@ -64,10 +64,10 @@ export default function Category() {
         current: pagination.current,
         pageSize:pagination.pageSize,
         ...values})
-      console.log(list);
+      // console.log(list);
       const {data}=list.data
       setData(data)
-      setPagination({...pagination, current:pagination.current, total:data.total})
+      setPagination({...pagination, current:pagination.current, total:list.data.total})      
     }
 
   useEffect(()=>{
@@ -83,8 +83,8 @@ export default function Category() {
       current: pagination.current,
       pageSize:pagination.pageSize,
       ...query})
-    console.log(list);
-    const {data}=list
+    // console.log(list);
+    const {data}=list.data
     setData(data)
   }
 
@@ -121,12 +121,12 @@ export default function Category() {
     // console.log(e);
     const res = await getCategoryList({...e, current:pagination.current,pageSize:pagination.pageSize})
     
-    setData(res.data)
+    setData(res.data.data)
     setPagination({...pagination, current:1, total:res.data.total})
   }
 
   const handleSearchClear = () => {
-    console.log(form);
+    // console.log(form);
     form.resetFields()
   }
 

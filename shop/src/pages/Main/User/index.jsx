@@ -6,10 +6,14 @@ import { message } from "antd";
 
 const User = () => {
 
-  const userInfo = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).info : ""
+  const userInfo = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).info.user : ""
   const isLogin = userInfo ? true : false
+    console.log(userInfo);
+
   const id = userInfo._id
   const navigator = useNavigate()
+
+  
 
   const aboutList = [{
     icon: "icon-zhanghaoxinxi",

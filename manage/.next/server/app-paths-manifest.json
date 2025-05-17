@@ -1,5 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/login/page": "app/login/page.js",
+  "/category/add/page": "app/category/add/page.js",
+  "/category/page": "app/category/page.js",
+  "/log/page": "app/log/page.js",
+  "/category/edit/[id]/page": "app/category/edit/[id]/page.js",
+  "/goods/page": "app/goods/page.js",
+  "/goods/add/page": "app/goods/add/page.js"
 }

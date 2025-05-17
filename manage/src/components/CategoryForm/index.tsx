@@ -72,7 +72,7 @@ export default function CategoryForm({ title, data }: { title: string; data?: Ca
             const res = await getCategoryList({ all: true, level: 1 })
             console.log(res);
 
-            setLevelOneList(res.data)
+            setLevelOneList(res.data.data)
         }
         fetchData()
     }, [])

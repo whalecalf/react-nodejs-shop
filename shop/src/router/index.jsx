@@ -27,7 +27,7 @@ const AppRouter=()=>{
                 <Routes>
                     {/* 底部导航栏 */}
                     <Route path="/" element={<Layout/>}>
-                        <Route exact path="/" element={<Home/>}></Route>
+                        <Route  path="/" exact="true" element={<Home/>}></Route>
                         <Route path="/cart" element={<Cart/>}></Route>
                         <Route path="/orderList" element={<OrderList/>}></Route>
                         <Route path="/user" element={<User/>}></Route>

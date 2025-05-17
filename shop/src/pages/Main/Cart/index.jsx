@@ -17,11 +17,14 @@ const Cart = () => {
     const fetchData = async () => {
         await api.getCart().then(res => {
             console.log(res);
-            setGoodsList([]||res.data.data)
+            setGoodsList(res.data.data||[])
+            console.log(goodsList);
+            
         })
     }
 
     useEffect(() => {
+        
         fetchData()
     }, [])
 

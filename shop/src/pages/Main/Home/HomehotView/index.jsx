@@ -14,8 +14,8 @@ const HomehotView=(props)=>{
                         props.data.map((element,index)=>{
                             return(<li key={index}>
                                 <a href={element.link}>
-                                    <img src={element.img} alt="" />
-                                    <span>{element.title}</span>
+                                    <img src={element.icon||element.pics[0].url} alt="" />
+                                    <span>{element.name}</span>
                                 </a>
                             </li>)
                             
