@@ -10,7 +10,7 @@ import addressSchema from "./AddressModel";
 import cartsSchema from "./cartsModel";
 import collectSchema from "./collectModel";
 
-var uri = "mongodb://michi:michi@ac-usfl17y-shard-00-00.ttw55qy.mongodb.net:27017,ac-usfl17y-shard-00-01.ttw55qy.mongodb.net:27017,ac-usfl17y-shard-00-02.ttw55qy.mongodb.net:27017/?ssl=true&replicaSet=atlas-dh4sso-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0"
+var uri = "mongodb://<username>:<password>@ac-usfl17y-shard-00-00.ttw55qy.mongodb.net:27017,ac-usfl17y-shard-00-01.ttw55qy.mongodb.net:27017,ac-usfl17y-shard-00-02.ttw55qy.mongodb.net:27017/?ssl=true&replicaSet=atlas-dh4sso-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0"
 
 async function main() {
     mongoose.connect(uri)
