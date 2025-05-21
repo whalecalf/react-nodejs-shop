@@ -15,14 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const qiniu_1 = __importDefault(require("qiniu"));
 var router = express_1.default.Router();
+// 七牛云账户对应AK及SK
 const Qiniu = {
-    AK: 'oF1fdJOoGr36XlVyLH70kAbxRlu3d3C76ceDwSS6',
-    SK: 't0OdQGbjHw6_H8yVX2qCEcpmDTN32-GCrKcvtpRk'
+    AK: '',
+    SK: ''
 };
 qiniu_1.default.conf.ACCESS_KEY = Qiniu.AK;
 qiniu_1.default.conf.SECRET_KEY = Qiniu.SK;
 // 七牛那边的对应的bucket名称
-const bucket = 'shop-database4';
+const bucket = '';
 const getToken = () => {
     const putPolicy = new qiniu_1.default.rs.PutPolicy({
         scope: bucket
